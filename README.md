@@ -1,9 +1,9 @@
 # my-gitpod-capacitor
-Ionic Capacitor as a gitpod
+pre-installs: Ionic, Capacitor, Cordova, Electron and the Android SDK 
 
 This Gitpod should install Java, Android sdk, Cordova, Qrcode and Ionic and setup paths.
 
-The bash files can be run with ./ infront of them Don't forget "tab" autofills
+The bash files can be run with ./ infront of them. Don't forget "tab" autofills the rest of the filename
 
 
 
