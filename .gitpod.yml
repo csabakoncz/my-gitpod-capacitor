@@ -18,6 +18,8 @@ tasks:
               chmod +x a04-ionic-start.sh                                                                                   && 
               chmod +x a05-ionic-rebuild.sh                                                                                 && 
               chmod +x a06-capacitor-create.sh                                                                              && 
+              chmod +x a07-capacitor-rebuild.sh                                                                             && 
+              chmod +x a08-electron.sh                                                                                      && 
               
               
               
