@@ -8,25 +8,25 @@ The bash files can be run with ./ infront of them Don't forget "tab" autofills
 
 
 
-./a01-cordova-create.sh   To create and run a basic cordova file    
+**./a01-cordova-create.sh**   To create and run a basic cordova file    
 
 
 
 
-./a02-cordova-rebuild.sh Change the www/index.html file and then rebuild the project
+**./a02-cordova-rebuild.sh** Change the www/index.html file and then rebuild the project
 
 
 
-./a03-android-sdkmanager.sh  To install more Android sdk platforms 
+**./a03-android-sdkmanager.sh**  To install more Android sdk platforms 
 
 
-a04-ionic-start.sh	 Make a blank Ionic Project
+**./a04-ionic-start.sh**	 Make a blank Ionic Project
 
 
-a05-ionic-rebuild.sh	Rebuild the Ionic project
+**./a05-ionic-rebuild.sh**	Rebuild the Ionic project
 
 
-a06-capacitor-create.sh  Make a blank Capacitor camera assignment
+**./a06-capacitor-create.sh**  Make a blank Capacitor camera assignment
 
 
 
