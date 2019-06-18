@@ -4,8 +4,8 @@
 # run it with the command
 # bash a10-generate-gradle-release.sh
 
-sudo mkdir /home/keystore
-cd /home/keystore
+mkdir /home/gitpod/keystore
+cd /home/gitpod/keystore
 
 echo "You will be asked for two passwords to enter. A keystore password and a key (alias) password for this app". 
 echo "Both passwords can be the same"
@@ -42,16 +42,16 @@ fi
 #echo "key.store=/home/keystore/$myStoreName.keystore"
 #echo "key.alias=$myStoreName"
 
-cd /home/ubuntu/workspace/$myStoreName
+cd /home/gitpod/workspace/my-gitpod-capacitor/$myStoreName
 
 
 # you have to make the build.gradle changes
-#printf "\n\nkey.store=/home/keystore/$myStoreName.keystore\nkey.alias=$myStoreName"  >> /home/ubuntu/workspace/$myStoreName/ant.properties
+#printf "\n\nkey.store=/home/keystore/$myStoreName.keystore\nkey.alias=$myStoreName"  >> /home/ubuntu/workspace/my-gitpod-capacitor/$myStoreName/ant.properties
 echo "----------------------------------------------"
 echo "Making Gradle unaligned unsigned release .apk"
 echo "----------------------------------------------"
 
-./gradlew assembleRelease
+./android/gradlew assembleRelease
 
 echo "----------------------------------------------"
 echo "back to the keystore folder"
@@ -61,13 +61,13 @@ echo "----------------------------------------------"
 # helloGradle-release-unsigned.apk
 #cd /home/keystore
 
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore  /home/keystore/$myStoreName.keystore /home/ubuntu/workspace/$myStoreName/build/outputs/apk/$myStoreName-release-unsigned.apk $myStoreName
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore  /home/gitpod/keystore/$myStoreName.keystore /home/gitpod/workspace/my-gitpod-capacitor/$myStoreName/build/outputs/apk/$myStoreName-release-unsigned.apk $myStoreName
 
 
 
 
 
-jarsigner -verify -verbose -certs /home/ubuntu/workspace/$myStoreName/build/outputs/apk/$myStoreName-release-unsigned.apk
+jarsigner -verify -verbose -certs /home/gitpod/workspace/my-gitpod-capacitor/$myStoreName/build/outputs/apk/$myStoreName-release-unsigned.apk
 
 echo "----------------------------------------------"
 echo "Aligning and naming the final signed aligned .apk"
@@ -76,7 +76,7 @@ echo "----------------------------------------------"
 
 
 
-/home/ubuntu/workspace/android-sdk-linux/build-tools/23.0.2/zipalign -v 4 /home/ubuntu/workspace/$myStoreName/build/outputs/apk/$myStoreName-release-unsigned.apk /home/ubuntu/workspace/$myStoreName/build/outputs/apk/$myStoreName.apk
+build-tools/29.0.1/zipalign -v 4 /home/gitpod/workspace/my-gitpod-capacitor/$myStoreName/build/outputs/apk/$myStoreName-release-unsigned.apk /home/gitpod/workspace/my-gitpod-capacitor/$myStoreName/build/outputs/apk/$myStoreName.apk
 #sudo /home/ubuntu/workspace/android-sdk-linux/build-tools/23.0.2/zipalign -v 4 /home/ubuntu/workspace/helloGradle/build/outputs/apk/helloGradle-release-unsigned.apk /home/ubuntu/workspace/helloGradle/build/outputs/apk/helloGradle.apk
 
 
@@ -113,9 +113,9 @@ echo "----------------------------------------------"
 
 
 
-cd /home/ubuntu/workspace/$myStoreName/build/outputs/apk
+cd /home/gitpod/workspace/my-gitpod-capacitor/$myStoreName/build/outputs/apk
 
-sudo cp /home/ubuntu/start-here/a10-generate-gradle-release.sh /home/ubuntu/workspace/$myStoreName/a10-generate-gradle-release.sh
+#cp /home/ubuntu/start-here/a10-generate-gradle-release.sh /home/ubuntu/workspace/my-gitpod-capacitor/$myStoreName/a10-generate-gradle-release.sh
 
 
 ls
@@ -131,7 +131,7 @@ printf "\n\n$myStoreName-release.apk, $(date), <a href='../$myStoreName/build/ou
 
 
 
-echo "Look for you new android /home/ubuntu/workspace/$myStoreName/build/outputs/apk/$myStoreName-release.apk"
+echo "Look for you new android /home/ubuntu/workspace/my-gitpod-capacitor/$myStoreName/build/outputs/apk/$myStoreName-release.apk"
 echo "right-click run index.html, then preview-preview running application to view webpage with .apk"
 echo ""
 echo ""
