@@ -20,8 +20,9 @@ tasks:
               chmod +x a06-capacitor-create.sh                                                                              && 
               chmod +x a07-capacitor-rebuild.sh                                                                             && 
               chmod +x a08-electron.sh                                                                                      && 
+              chmod +x a10-android-release.sh                                                                               && 
               
-              
+             
               
              
 
