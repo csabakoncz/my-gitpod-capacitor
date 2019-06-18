@@ -1,8 +1,8 @@
 #!/bin/bash  
 
-# Find or copy this file to your cloud9 Android-SDK workspace
-# run it with the command
-# bash a10-generate-gradle-release.sh
+# Probably not a good idea to make this online. 
+# shows some of the steps to make an Android release version
+# This is very old the step probably have changed
 
 mkdir /home/gitpod/keystore
 cd /home/gitpod/keystore
