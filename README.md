@@ -35,7 +35,10 @@ The bash files can be run with ./ infront of them. Don't forget "tab" autofills 
 
 A Gitpod snapshot of this site is here updated Jun 18th, 2019 
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/2078a015-533d-49fe-a179-1f885d7d4d6d)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/2078a015-533d-49fe-a179-1f885d7d4d6d) Electron version 5 has issues in a container
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/765c20c8-a432-4cf8-b04d-fc5c343bd39c)
+ electron V4
 
 
 
