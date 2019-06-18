@@ -9,9 +9,9 @@ tasks:
               touch /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt       &&
        
        
-              echo "Starting .gitpod.yml installation" &>>  /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt  &&  
+              echo "Starting .gitpod.yml installation" &>>  /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt      &&  
               
-              echo "Set bash files to runable"         &>>  /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt  &&                 
+              echo "Set bash files to runable"         &>>  /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt      &&                 
               chmod +x a01-cordova-create.sh                                                                                &&      
               chmod +x a02-cordova-rebuild.sh                                                                               &&     
               chmod +x a03-android-sdkmanager.sh                                                                            && 
@@ -27,16 +27,16 @@ tasks:
              
           
    
-              echo "Installing Android Platforms "     &>>  /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt  &&  
+              echo "Installing Android Platforms "     &>>  /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt      &&  
               export ANDROID_SDK_ROOT=" /home/gitpod/.android"                                                              &&                        
               export PATH="${PATH}:${ANDROID_SDK_ROOT}/tools:${ANDROID_SDK_ROOT}/tools/bin:${ANDROID_SDK_ROOT}/platform-tools"  &&                       
-              echo  $PATH                              &>> /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt   &&   
+              echo  $PATH                              &>> /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt       &&   
               yes | sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28"                                 &&       
-              sdkmanager --list                        &>> /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt   &&     
+              sdkmanager --list                        &>> /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt       &&     
              
 
           
-              echo "Starting Apache"                   &>>  /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt  &&   
+              echo "Starting Apache"                   &>>  /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt      &&   
               apachectl start                                                                                               &&
               gp await-port 8001                                                                                            && 
               gp preview $(gp url 8001)                                                                                     &&
