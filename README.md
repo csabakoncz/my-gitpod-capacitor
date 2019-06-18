@@ -33,9 +33,9 @@ The bash files can be run with ./ infront of them. Don't forget "tab" autofills 
 
 
 
-A Gitpod snapshot of this site is here 
+A Gitpod snapshot of this site is here updated Jun 18th, 2019 
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/909e6839-50d2-4a70-a67f-fdb5df14182d)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/ebf4acb0-bceb-44f0-8af1-a163039ab476)
 
 
 
