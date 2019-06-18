@@ -8,6 +8,23 @@ Research that might be relevant
 
 
 
+
+https://stackoverflow.com/questions/55858451/vue-3-electron-simple-example-not-working
+
+sudo chown root:root chrome-sandbox
+sudo chmod 4755 chrome-sandbox
+
+Another workaround is mentioned, which enables "user namespace sandboxing" instead of the "SUID sandbox":
+
+sudo sysctl kernel.unprivileged_userns_clone=1
+
+Supposedly this option is enabled on Ubuntu by default, but not on Arch Linux, and apparently also not on your Debian system. To make the change permanent, you can create /etc/sysctl.d/electron.conf with the following content:
+
+kernel.unprivileged_userns_clone = 1
+
+
+
+
 https://unix.stackexchange.com/questions/175967/how-to-run-google-chrome-as-root-in-linux
 
 google-chrome-stable --no-sandbox
@@ -28,7 +45,7 @@ to
 exec -a "$0" "$HERE/chrome" "$@" --user-data-dir --no-sandbox
 
 
-
+google-chrome --no-sandbox
 
 
 google-chrome --user-data-dir="/root/chrome-profile/"
@@ -41,7 +58,7 @@ gksu -wu chrome-user google-chrome
 google-chrome-stable --no-sandbox --user-data-dir
 
 
-
+maybe install electron v4.2.4
 
 
 Installation
