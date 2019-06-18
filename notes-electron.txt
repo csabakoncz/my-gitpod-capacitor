@@ -8,6 +8,42 @@ Research that might be relevant
 
 
 
+https://unix.stackexchange.com/questions/175967/how-to-run-google-chrome-as-root-in-linux
+
+google-chrome-stable --no-sandbox
+
+
+
+
+https://stackoverflow.com/questions/12258086/how-do-i-run-google-chrome-as-root
+
+google-chrome --no-sandbox --user-data-dir
+
+Open the file opt/google/chrome/google-chrome and replace
+
+exec -a "$0" "$HERE/chrome" "$@"
+
+to
+
+exec -a "$0" "$HERE/chrome" "$@" --user-data-dir --no-sandbox
+
+
+
+
+
+google-chrome --user-data-dir="/root/chrome-profile/"
+
+
+
+
+gksu -wu chrome-user google-chrome
+
+google-chrome-stable --no-sandbox --user-data-dir
+
+
+
+
+
 Installation
 To install prebuilt Electron binaries, use npm. The preferred method is to install Electron as a development dependency in your app:
 
