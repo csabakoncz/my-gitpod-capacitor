@@ -25,3 +25,12 @@ npm install --arch=ia32 electronCopy
 In addition to changing the architecture, you can also specify the platform (e.g., win32, linux, etc.) using the --platform flag:
 
 npm install --platform=win32 electron
+
+
+
+
+
+for packaging check
+
+https://electronjs.org/docs/tutorial/application-distribution
+
