@@ -34,3 +34,19 @@ for packaging check
 
 https://electronjs.org/docs/tutorial/application-distribution
 
+https://www.microsoft.com/developerblog/2018/04/17/packaging-electron-app-managed-distribution-across-devices/
+
+
+
+
+
+
+Another possible method
+
+https://anaconda.org/conda-forge/electron
+
+conda install -c conda-forge electron 
+conda install -c conda-forge/label/gcc7 electron 
+conda install -c conda-forge/label/cf201901 electron
+
+
