@@ -1,0 +1,27 @@
+
+Problem:
+
+Chrome needs root:root user and 4775 mode but user is gitpod:gitpod and mode is 775. Does not run. In gitpod we have no access to sudo so this is a bit of a pain.
+
+
+Research that might be relevant
+
+
+
+Installation
+To install prebuilt Electron binaries, use npm. The preferred method is to install Electron as a development dependency in your app:
+
+npm install electron --save-devCopy
+See the Electron versioning doc for info on how to manage Electron versions in your apps.
+
+Global Installation
+You can also install the electron command globally in your $PATH:
+
+npm install electron -gCopy
+Customization
+If you want to change the architecture that is downloaded (e.g., ia32 on an x64 machine), you can use the --arch flag with npm install or set the npm_config_arch environment variable:
+
+npm install --arch=ia32 electronCopy
+In addition to changing the architecture, you can also specify the platform (e.g., win32, linux, etc.) using the --platform flag:
+
+npm install --platform=win32 electron
