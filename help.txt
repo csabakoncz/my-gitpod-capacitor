@@ -1,0 +1,135 @@
+cordova --help
+
+cordova command [options]
+
+Global Commands
+    create ............................. Create a project
+    help ............................... Get help for a command
+    telemetry .......................... Turn telemetry collection on or off
+    config ............................. Set, get, delete, edit, and list global cordova options
+
+Project Commands
+    info ............................... Generate project information
+    requirements ....................... Checks and print out all the requirements
+                                            for platforms specified
+
+    platform ........................... Manage project platforms
+    plugin ............................. Manage project plugins
+
+    prepare ............................ Copy files into platform(s) for building
+    compile ............................ Build platform(s)
+    clean .............................. Cleanup project from build artifacts
+
+    run ................................ Run project
+                                            (including prepare && compile)
+    serve .............................. Run project with a local webserver
+                                            (including prepare)
+
+Learn more about command options using 'cordova help <command>'
+
+Aliases
+    build -> cordova prepare && cordova compile
+    emulate -> cordova run --emulator
+
+Options
+    -v, --version ...................... prints out this utility's version
+    -d, --verbose ...................... debug mode produces verbose log output for all activity,
+    --no-update-notifier ............... disables check for CLI updates
+    --nohooks .......................... suppress executing hooks
+                                         (taking RegExp hook patterns as parameters)
+
+Examples
+    cordova create myApp org.apache.cordova.myApp myApp
+    cordova plugin add cordova-plugin-camera
+    cordova platform add android
+    cordova plugin add cordova-plugin-camera --nosave
+    cordova platform add android --nosave
+    cordova requirements android    
+    cordova build android --verbose
+    cordova run android
+    cordova build android --release -- --keystore="..\android.keystore" --storePassword=android --alias=mykey
+    cordova config ls
+    
+    
+    
+    
+    
+
+ionic --help
+
+
+ _             _
+  (_) ___  _ __ (_) ___
+  | |/ _ \| '_ \| |/ __|
+  | | (_) | | | | | (__
+  |_|\___/|_| |_|_|\___| CLI 5.1.0
+
+
+  Usage:
+
+    $ ionic <command> [<args>] [--help] [--verbose] [--quiet] [--no-interactive] [--no-color] [--confirm] [options]
+
+  Global Commands:
+
+    completion ...................... (experimental) Enables tab-completion for Ionic CLI commands.
+    config <subcommand> ............. Manage CLI and project config values (subcommands: get, set, unset)
+    docs ............................ Open the Ionic documentation website
+    info ............................ Print project, system, and environment information
+    init ............................ (beta) Initialize existing projects with Ionic
+    login ........................... Log in to Ionic
+    logout .......................... Log out of Ionic
+    signup .......................... Create an Ionic account
+    ssh <subcommand> ................ Commands for configuring SSH keys (subcommands: add, delete, generate, list,
+                                      setup, use)
+    start ........................... Create a new project
+
+  Project Commands:
+
+    You are not in a project directory.
+
+
+
+electron --help
+
+Electron 5.0.5 - Build cross platform desktop apps with JavaScript, HTML, and CSS
+Usage: electron [options] [path]
+
+A path to an Electron app may be specified. It must be one of the following:
+  - index.js file.
+  - Folder containing a package.json file.
+  - Folder containing an index.js file.
+  - .html/.htm file.
+  - http://, https://, or file:// URL.
+
+Options:
+  -i, --interactive     Open a REPL to the main process.
+  -r, --require         Module to preload (option can be repeated).
+  -v, --version         Print the version.
+  -a, --abi             Print the Node ABI version.
+  
+  
+  
+  
+  
+
+
+capacitor --help
+
+Usage: capacitor [options] [command] <command>
+
+Options:
+  -V, --version                             output the version number
+  -h, --help                                output usage information
+
+Commands:
+  create [options] [directory] [name] [id]  Creates a new Capacitor project
+  init [options] [appName] [appId]          Initializes a new Capacitor project in the current directory
+  serve                                     Serves a Capacitor Progressive Web App in the browser
+  sync [platform]                           updates + copy
+  update [platform]                         updates the native plugins and dependencies based in package.json
+  copy [platform]                           copies the web app build into the native app
+  open [platform]                           opens the native project workspace (xcode for iOS)
+  add [platform]                            add a native platform project
+  ls [platform]                             list installed Cordova and Capacitor plugins
+  doctor [platform]                         checks the current setup for common errors
+  plugin:generate                           start a new Capacitor plugin
