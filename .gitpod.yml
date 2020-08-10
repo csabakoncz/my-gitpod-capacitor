@@ -35,7 +35,8 @@ tasks:
               export ANDROID_SDK_ROOT=" /home/gitpod/.android"                                                              &&
               export PATH="${PATH}:${ANDROID_SDK_ROOT}/tools:${ANDROID_SDK_ROOT}/tools/bin:${ANDROID_SDK_ROOT}/platform-tools"  &&
               echo  $PATH                              &>> /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt       &&
-              yes | sdkmanager "platform-tools" "build-tools;28.0.3" "platforms;android-28" &>> $GITPOD_REPO_ROOT/logs/gitpod-install-log.txt &&
+              yes | sdkmanager "build-tools;30.0.1" &>> $GITPOD_REPO_ROOT/logs/gitpod-install-log.txt &&
+              yes | sdkmanager "platforms;android-30" &>> $GITPOD_REPO_ROOT/logs/gitpod-install-log.txt &&
               sdkmanager --list                        &>> /workspace/my-gitpod-capacitor/logs/gitpod-install-log.txt       &&
 
 
