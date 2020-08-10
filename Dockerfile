@@ -20,7 +20,7 @@ USER gitpod
 
 RUN mkdir -p /home/gitpod/rocksetta                                                                            \
     && mkdir -p /home/gitpod/rocksetta/logs                                                                    \
-    && mkdir -p /home/gitpod/.android                                                                          \
+    && mkdir -p /home/gitpod/.android/cmdline-tools                                                                          \
     && touch /home/gitpod/.android/repositories.cfg                                                            \
     && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                            \
     && echo "Installation start, made some folders in /home/gitpod" >> /home/gitpod/rocksetta/logs/mylogs.txt  \
@@ -41,9 +41,9 @@ USER root
 
 
  ENV ANDROID_SDK_ROOT /home/gitpod/.android
- ENV PATH ${PATH}:${ANDROID_SDK_ROOT}/tools:${ANDROID_SDK_ROOT}/tools/bin:${ANDROID_SDK_ROOT}/platform-tools
+ ENV PATH ${PATH}:${ANDROID_SDK_ROOT}/cmdline-tools/tools/bin
 
-WORKDIR /home/gitpod/.android
+WORKDIR /home/gitpod/.android/cmdline-tools
 
 # https://stackoverflow.com/questions/46402772/failed-to-install-android-sdk-java-lang-noclassdeffounderror-javax-xml-bind-a#answer-58652345
 RUN wget -O sdk-tools-linux.zip https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip     \
