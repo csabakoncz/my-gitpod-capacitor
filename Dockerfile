@@ -17,17 +17,17 @@ RUN apt-get update                                                  \
 
 
 USER gitpod
-  
-RUN mkdir -p /home/gitpod/rocksetta                                                                            \ 
-    && mkdir -p /home/gitpod/rocksetta/logs                                                                    \ 
+
+RUN mkdir -p /home/gitpod/rocksetta                                                                            \
+    && mkdir -p /home/gitpod/rocksetta/logs                                                                    \
     && mkdir -p /home/gitpod/.android                                                                          \
     && touch /home/gitpod/.android/repositories.cfg                                                            \
     && touch /home/gitpod/rocksetta/logs/mylogs.txt                                                            \
     && echo "Installation start, made some folders in /home/gitpod" >> /home/gitpod/rocksetta/logs/mylogs.txt  \
     && echo "Try installing cordova, ionic, qrcode, @ionic/lab, cordova-res, native-run  @capacitor/core @capacitor/cli electron electron-packager " >> /home/gitpod/rocksetta/logs/mylogs.txt  \
     && npm install -g cordova ionic qrcode @ionic/lab cordova-res native-run @capacitor/core @capacitor/cli electron  electron-packager                               \
-    && echo "Back to root to install the Android sdk" >> /home/gitpod/rocksetta/logs/mylogs.txt                
-    
+    && echo "Back to root to install the Android sdk" >> /home/gitpod/rocksetta/logs/mylogs.txt
+
 
 
 
@@ -45,11 +45,12 @@ USER root
 
 WORKDIR /home/gitpod/.android
 
-RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip     \
-    && unzip sdk-tools-linux-4333796.zip                                          \                                                             
-    && rm sdk-tools-linux-4333796.zip                                             \
+# https://stackoverflow.com/questions/46402772/failed-to-install-android-sdk-java-lang-noclassdeffounderror-javax-xml-bind-a#answer-58652345
+RUN wget -O sdk-tools-linux.zip https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip     \
+    && unzip sdk-tools-linux.zip                                          \
+    && rm sdk-tools-linux.zip                                             \
     && chmod -R 775 /home/gitpod/.android                                         \
-    && chown -R gitpod:gitpod /home/gitpod/.android                               
+    && chown -R gitpod:gitpod /home/gitpod/.android
 
 
 USER gitpod
@@ -57,7 +58,7 @@ USER gitpod
 
 RUN  echo "Here is the android sdk" >> /home/gitpod/rocksetta/logs/mylogs.txt             \
      && ls -ls /home/gitpod/.android >> /home/gitpod/rocksetta/logs/mylogs.txt            \
-     &&  echo "Installation all done" >> /home/gitpod/rocksetta/logs/mylogs.txt          
+     &&  echo "Installation all done" >> /home/gitpod/rocksetta/logs/mylogs.txt
 
 #RUN sysctl kernel.unprivileged_userns_clone=1
 
